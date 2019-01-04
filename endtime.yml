@@ -1,0 +1,6 @@
+---
+- name: Print the End time
+  hosts: localhost
+  
+  tasks:
+  - debug: msg="Ending Time for Ansible Tower workflow/playbook at {{ ansible_date_time.iso8601 }} "
