@@ -1,0 +1,6 @@
+---
+- name: Print the Start time
+  hosts: localhost
+  
+  tasks:
+  - debug: msg="Starting Time for Ansible Tower workflow/playbook at {{ ansible_date_time.iso8601 }} "
