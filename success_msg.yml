@@ -1,0 +1,6 @@
+---
+- name: Print the Success time
+  hosts: localhost
+  
+  tasks:
+  - debug: msg="Ending Time for Successful Ansible Tower workflow/playbook at {{ ansible_date_time.iso8601 }} "
