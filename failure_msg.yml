@@ -1,0 +1,6 @@
+---
+- name: Print the failure time
+  hosts: localhost
+  
+  tasks:
+  - debug: msg="Ending Time for failed Ansible Tower workflow/playbook at {{ ansible_date_time.iso8601 }} "
