@@ -1,0 +1,6 @@
+---
+- name: Playbook with syntax error
+  hosts: localhost
+  
+  tasks:
+  - debug: msg="Syntax error in Ansible Tower workflow/playbook at {{ ansible_date_time.iso8601 }}
