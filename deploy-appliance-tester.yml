@@ -15,20 +15,20 @@
       shell: "cp /builds/manageiq/{{ release }}/{{ version }}/manageiq-vsphere*.ova /run/{{ version }}.ova"
    #   become: true
 
-    - name: Deploying OVA File
-      vmware_deploy_ovf:
-        hostname: '{{ myhost }}'
-        username: '{{ redhatID }}'
-        password: '{{ redhatPass }}'
-        cluster: dev-vc67-cluster
-        datacenter: dev-vc67-DC
-        datastore: NFS Share
-        ovf: "/run/{{ version }}.ova"
-        allow_duplicates: no
-        validate_certs: no
-        name: '{{ newvm }}'
-        power_on: no
-      delegate_to: localhost
+ #   - name: Deploying OVA File
+ #     vmware_deploy_ovf:
+ #       hostname: '{{ myhost }}'
+  #      username: '{{ redhatID }}'
+ #       password: '{{ redhatPass }}'
+ #       cluster: dev-vc67-cluster
+  #      datacenter: dev-vc67-DC
+ #       datastore: NFS Share
+ #       ovf: "/run/{{ version }}.ova"
+  #      allow_duplicates: no
+ #       validate_certs: no
+  #      name: '{{ newvm }}'
+  #      power_on: no
+  #    delegate_to: localhost
 
 #   - name: Adding DB disk to appliance
 #     vmware_guest_disk:
