@@ -1,0 +1,6 @@
+---
+- name: Print the End time
+  hosts: all
+  
+  tasks:
+  - debug: msg="Ending Time for Ansible Tower playbook at {{ ansible_date_time.iso8601 }} "
