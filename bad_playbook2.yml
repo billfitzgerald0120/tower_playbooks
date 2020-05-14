@@ -1,0 +1,6 @@
+---
+- name: Playbook with syntax error 2
+  hosts: localhost
+  
+  tasks:
+  - debug: msg="my_test: test\/test\\test"
