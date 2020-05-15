@@ -3,4 +3,4 @@
   hosts: localhost
   
   tasks:
-  - debug: msg="my_test: test\/test\\test"
+  - debug: msg="my_test: no trailing quota
