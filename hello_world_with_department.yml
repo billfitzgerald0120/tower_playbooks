@@ -1,0 +1,7 @@
+---
+# This playbook prints a simple hello world with message
+- name: Echo Hello, world! with passed department variable
+  hosts: localhost
+  
+  tasks:
+  - debug: msg="Hello, World! department answer is {{ department }}"
