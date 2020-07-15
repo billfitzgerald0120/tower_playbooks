@@ -1,0 +1,15 @@
+---
+# Takes 1 parameters that can be passed in as --extra-vars
+# This playbook is for Fedors, CentOS, Redhat
+#
+# cmd1 =>  the command to/should be run
+#
+# ansible-playbook runcmd.yml --ask-pass --extra-vars "cmd1=ls -al"
+#
+  - hosts: all 
+
+    gather_facts: no
+    tasks:
+    - shell: '{{ cmd1 }}'
+
+    - debug: msg="the cmd command was {{ cmd1 }}"
