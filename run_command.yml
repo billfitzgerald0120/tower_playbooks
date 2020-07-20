@@ -3,5 +3,4 @@
 - name: Executes ucommand passed in extra vars
   hosts: all
 
-  shell:
-    cmd: "{{ ucommand }}"
+  command: "{{ ucommand }}"
