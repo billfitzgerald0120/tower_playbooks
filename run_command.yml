@@ -1,8 +1,7 @@
 ---
-# This playbook prints a simple hello world message
+# This playbook Executes ucommand passed in extra vars
 - name: Executes ucommand passed in extra vars
   hosts: all
 
   shell:
     cmd: "{{ ucommand }}"
-  - debug: msg="Command executed: {{ ucommand }}"
