@@ -1,0 +1,8 @@
+---
+# This playbook prints a simple hello world message
+- name: Executes ucommand passed in extra vars
+  hosts: all
+
+  shell:
+    cmd: df {{ ucommand }}
+  - debug: msg="Command executed: {{ ucommand }}"
