@@ -13,5 +13,5 @@
     - shell: '{{ cmd1 }}'
 
     register: command1
-     - debug: var=command1.stdout_lines
+  - debug: var=command1.stdout_lines
 
