@@ -4,5 +4,5 @@
   hosts: all
 
   shell:
-    cmd: "{{ ucommand }}""
+    cmd: "{{ ucommand }}"
   - debug: msg="Command executed: {{ ucommand }}"
