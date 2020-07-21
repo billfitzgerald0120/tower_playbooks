@@ -6,12 +6,14 @@
 #
 # ansible-playbook runcmd.yml --ask-pass --extra-vars "cmd1=ls -al"
 #
-  - hosts: all 
+  - name: Run command passed
+    hosts: all 
 
     gather_facts: no
     tasks:
-    - shell: '{{ cmd1 }}'
+      shell: '{{ cmd1 }}'
 
     register: command1
-  - debug: var=command1.stdout_lines
+  - name: Show results from sysout
+    debug: var=command1.stdout
 
