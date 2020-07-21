@@ -2,11 +2,12 @@
 # Try to write results to stdout and display
 # ansible-playbook example1.yml --ask-pass
 #
-- name: generate PSK
-  shell: df -h
-  register: psk
+- hosts: all
+  tasks:
+  - shell: 'df -h'
+    register: psk
 
 - set_fact: 
     psk={{ psk.stdout }}
 
-- debug: var=psk
+  - debug: var=psk
