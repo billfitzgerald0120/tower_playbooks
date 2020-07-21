@@ -5,11 +5,8 @@
 - name: generate PSK
   shell: df -h
   register: psk
-  delegate_to: 127.0.0.1
-  run_once: true
 
 - set_fact: 
     psk={{ psk.stdout }}
 
 - debug: var=psk
-  run_once: true
