@@ -7,7 +7,4 @@
   - shell: 'df -h'
     register: psk
 
-- set_fact: 
-    psk={{ psk.stdout }}
-
-  - debug: var=psk
+  - debug: msg="{{ psk.stdout }}"
