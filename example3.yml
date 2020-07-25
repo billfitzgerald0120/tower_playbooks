@@ -1,0 +1,17 @@
+---
+# Try to write results to stdout and display
+# ansible-playbook example3.yml --ask-pass  --extra-vars "cmd1=?||ls -al cmd2=?||ls -al"
+#
+- hosts: all
+  tasks:
+  - name: Run cmd1
+    shell: '{{ cmd1 }}'
+    register: psk
+
+  - debug: msg="{{ psk.stdout }}"
+
+  - name: Run cmd2
+    shell: '{{ cmd2 }}'
+    register: psk2
+
+  - debug: msg="{{ psk2.stdout }}"
