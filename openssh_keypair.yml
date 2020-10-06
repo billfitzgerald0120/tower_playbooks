@@ -1,5 +1,5 @@
 - name: generate SSH key
-  hosts: 127.0.0.1
+  hosts: all
   connection: local
   vars:
     ssh_key_filename: id_rsa_myproject
