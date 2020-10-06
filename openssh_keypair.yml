@@ -1,6 +1,5 @@
 - name: generate SSH key
   hosts: all
-  connection: local
   vars:
     ssh_key_filename: id_rsa_myproject
   tasks:
