@@ -1,7 +1,7 @@
 - name: generate SSH key
   hosts: all
   vars:
-    ssh_key_filename: id_rsa_myproject
+    ssh_key_filename: id_rsa_myproject2
   tasks:
     - name: generate SSH key "{{ssh_key_filename}}"
       openssh_keypair:
